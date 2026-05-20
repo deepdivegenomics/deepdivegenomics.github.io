@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why This Workshop | Deep Dive Genomics</title>
+  <meta name="description" content="Learn why Deep Dive Genomics exists — bridging the gap between running bioinformatics pipelines and truly understanding genomic results.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#x1F9EC;</span> DeepDive<span class="text-accent">Genomics</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="curriculum.html">Curriculum</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="register.html" class="nav-cta">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section about-section" id="about">
+    <div class="section-container">
+      <h1 class="section-title">Why This Workshop Exists</h1>
+      <div class="section-divider"></div>
+      
+      <div class="narrative-block">
+        <blockquote class="narrative-quote">
+          <p>Most bioinformatics workshops teach you how to run the tools and build the pipeline. But what happens <span class="text-accent">after variant calling</span>? Which variants actually matter? How do you connect them to a <span class="text-secondary">clinical diagnosis</span>?</p>
+          <p>That's the gap we noticed — and that's exactly what this workshop is designed to fill.</p>
+        </blockquote>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="comparison-card comparison-others">
+          <div class="comparison-header">
+            <span class="comparison-icon">📋</span>
+            <h3>What Others Teach</h3>
+          </div>
+          <ul class="comparison-list">
+            <li><i class="fas fa-terminal"></i> Run the tools</li>
+            <li><i class="fas fa-project-diagram"></i> Build the pipeline</li>
+            <li><i class="fas fa-file-code"></i> Get the VCF file</li>
+          </ul>
+        </div>
+        <div class="comparison-card comparison-ours">
+          <div class="comparison-header">
+            <span class="comparison-icon">🧬</span>
+            <h3>What We Teach</h3>
+          </div>
+          <ul class="comparison-list">
+            <li><i class="fas fa-brain"></i> Understand the algorithms</li>
+            <li><i class="fas fa-search"></i> Interpret the variants</li>
+            <li><i class="fas fa-heartbeat"></i> Connect genomics to real clinical diagnosis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="audience-section">
+        <h2 class="subsection-title">Who Should Attend</h2>
+        <div class="audience-tags">
+          <span class="audience-tag">
+            <i class="fas fa-graduation-cap"></i> Students in bioinformatics, genomics, or computational biology
+          </span>
+          <span class="audience-tag">
+            <i class="fas fa-flask"></i> Life science researchers wanting to upskill
+          </span>
+          <span class="audience-tag">
+            <i class="fas fa-stethoscope"></i> Clinicians or genetic counselors wanting a computational foundation
+          </span>
+          <span class="audience-tag">
+            <i class="fas fa-code"></i> Anyone who has run a pipeline but never truly understood what it produced
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

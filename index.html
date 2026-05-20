@@ -1,95 +1,68 @@
 <!DOCTYPE html>
-<html lang='en'>
-
+<html lang="en">
 <head>
-    <base href=".">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
-    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css" />
-    <meta name="description"
-        content="Deep Dive Genomics 2026 — A hands-on workshop covering Variant Calling Pipelines, Python for Bioinformatics, and Algorithms in Bioinformatics.">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="KeyWords"
-        content="Bioinformatics, Genomics, Workshop, Variant Calling, Python, Algorithms, Linux, NGS ">
-    <title>Home | Deep Dive Genomics 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond the Pipeline | Deep Dive Genomics</title>
+  <meta name="description" content="A bioinformatics workshop going beyond pipeline execution — into algorithms, variant interpretation, and clinical genomics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <div class="banner">
-        <img src="assets/banner.jpg" alt="Deep Dive Genomics 2026 Banner">
-        <div class="top-left">
-            <span class="title1">Deep Dive </span><span class="title2">Genomics</span> <span class="year">2026</span>
-        </div>
-        <div class="bottom-right">
-            Foundational Genomics &amp; Bioinformatics Workshop <br> June 2026 <br>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#x1F9EC;</span> DeepDive<span class="text-accent">Genomics</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="curriculum.html">Curriculum</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="register.html" class="nav-cta">Register</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <table class="navigation">
-        <tr>
-            <td class="navigation">
-                <a class="current" title="Workshop Home Page" href=".">Home</a>
-            </td>
-            <td class="navigation">
-                <a title="Workshop Courses" href="courses">Courses</a>
-            </td>
-            <td class="navigation">
-                <a title="Workshop Schedule" href="program">Program</a>
-            </td>
-            <td class="navigation">
-                <a title="Meet the Instructors" href="instructors">Instructors</a>
-            </td>
-            <td class="navigation">
-                <a title="Register for the Workshop" href="registration">Registration</a>
-            </td>
-        </tr>
-    </table>
+  <section class="hero" id="hero">
+    <div class="hero-bg-animation">
+      <div class="dna-strand dna-strand-1"></div>
+      <div class="dna-strand dna-strand-2"></div>
+      <div class="dna-strand dna-strand-3"></div>
+      <div class="floating-particle" style="--delay: 0s; --x: 10%; --duration: 15s;"></div>
+      <div class="floating-particle" style="--delay: 2s; --x: 25%; --duration: 18s;"></div>
+      <div class="floating-particle" style="--delay: 4s; --x: 50%; --duration: 12s;"></div>
+      <div class="floating-particle" style="--delay: 6s; --x: 70%; --duration: 20s;"></div>
+      <div class="floating-particle" style="--delay: 1s; --x: 85%; --duration: 16s;"></div>
+      <div class="floating-particle" style="--delay: 3s; --x: 40%; --duration: 14s;"></div>
+      <div class="floating-particle" style="--delay: 5s; --x: 60%; --duration: 17s;"></div>
+      <div class="floating-particle" style="--delay: 7s; --x: 90%; --duration: 13s;"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag terminal-text">$ workshop --mode deep_dive</p>
+      <h1>Beyond the Pipeline</h1>
+      <h2 class="hero-subtitle">Genomics Analysis from Code to Clinic</h2>
+      <p class="hero-description">
+        Most workshops stop at running tools. This one goes further — into the
+        <span class="text-accent">algorithms</span> powering genomics,
+        <span class="text-secondary">variant interpretation</span>, and
+        real <span class="text-accent">clinical relevance</span>.
+      </p>
+      <a href="YOUR_GOOGLE_FORM_URL" target="_blank" rel="noopener" class="btn-primary" id="hero-cta">
+        <i class="fas fa-rocket"></i> Register Now
+      </a>
+    </div>
+  </section>
 
-    <h2>About the Workshop</h2>
-    <p>
-        Deep Dive Genomics 2026 is a comprehensive, hands-on workshop designed for graduate students, early-career
-        researchers, and bioinformatics enthusiasts who want to build a strong foundation in genomic data analysis. Over
-        the course of this workshop, participants will gain practical skills in Linux command-line operations, variant
-        calling pipelines using industry-standard tools, Python programming for biological data, and core algorithmic
-        concepts that underpin modern bioinformatics workflows.
-    </p>
-    <p>
-        Whether you are just starting out in genomics or looking to solidify your computational skills, this workshop
-        provides a structured, mentor-guided learning experience with real-world datasets and hands-on exercises.
-    </p>
-
-    <h2>What You Will Learn</h2>
-    <ul>
-        <li>&#9654; Navigate and operate efficiently in a Linux environment for bioinformatics</li>
-        <li>&#9654; Execute an end-to-end variant calling pipeline: from raw FASTQ reads to annotated VCF files</li>
-        <li>&#9654; Write Python scripts to parse, analyze, and visualize biological data</li>
-        <li>&#9654; Understand fundamental algorithms used in sequence alignment, genome assembly, and variant detection
-        </li>
-        <li>&#9654; Work with real-world genomic datasets and industry-standard tools (BWA, SAMtools, GATK, bcftools)
-        </li>
-    </ul>
-
-    <h2>Who Should Attend?</h2>
-    <p>
-        This workshop is ideal for:
-    </p>
-    <ul>
-        <li>&#9654; Graduate students in biology, bioinformatics, or computational biology</li>
-        <li>&#9654; Researchers transitioning into genomics from wet-lab backgrounds</li>
-        <li>&#9654; Anyone interested in learning the computational foundations of genomic analysis</li>
-    </ul>
-
-    <p>
-        Organized by <strong>Hiba</strong> &amp; <strong>Bikram</strong> — Reach out to us at <a
-            href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a> for questions.
-    </p>
-
-    <footer>
-        &copy; Deep Dive Genomics 2026
-        &nbsp;|&nbsp; Design by <a href="https://github.com/mikepierce">Mike Pierce</a>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
-
 </html>

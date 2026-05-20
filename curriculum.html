@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum | Deep Dive Genomics</title>
+  <meta name="description" content="Explore the Deep Dive Genomics curriculum — from Linux and Python basics to variant calling, algorithm internals, and clinical interpretation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-icon">&#x1F9EC;</span> DeepDive<span class="text-accent">Genomics</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="curriculum.html">Curriculum</a></li>
+        <li><a href="instructors.html">Instructors</a></li>
+        <li><a href="register.html" class="nav-cta">Register</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section curriculum-section" id="curriculum">
+    <div class="section-container">
+      <h1 class="section-title">What You'll Learn</h1>
+      <div class="section-divider"></div>
+
+      <div class="timeline">
+        <!-- Module 1 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-number">01</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-terminal"></i></div>
+            <h3 class="timeline-title">Linux for Bioinformatics</h3>
+            <span class="timeline-badge">Introduction</span>
+            <p class="timeline-description">Command line basics, file systems, working with FASTQ/BAM/VCF files, shell scripting for genomics. Build the foundation every bioinformatician needs.</p>
+            <div class="timeline-tags">
+              <span class="mini-tag">Bash</span>
+              <span class="mini-tag">CLI</span>
+              <span class="mini-tag">File Formats</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-number">02</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fab fa-python"></i></div>
+            <h3 class="timeline-title">Python for Bioinformatics</h3>
+            <span class="timeline-badge">Introduction</span>
+            <p class="timeline-description">Biopython basics, parsing genomic file formats, automation scripts, pandas for genomics data. Write code that actually solves biological problems.</p>
+            <div class="timeline-tags">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">Biopython</span>
+              <span class="mini-tag">Pandas</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-number">03</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-dna"></i></div>
+            <h3 class="timeline-title">The Variant Calling Pipeline</h3>
+            <span class="timeline-badge badge-core">Core Module</span>
+            <p class="timeline-description">Read alignment, preprocessing, variant calling (GATK, FreeBayes), VCF structure and filtering. Not just running tools — understanding the algorithms beneath them.</p>
+            <div class="timeline-tags">
+              <span class="mini-tag">GATK</span>
+              <span class="mini-tag">FreeBayes</span>
+              <span class="mini-tag">VCF</span>
+              <span class="mini-tag">BWA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-number">04</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-cogs"></i></div>
+            <h3 class="timeline-title">Under the Hood</h3>
+            <span class="timeline-badge badge-core">Core Module</span>
+            <p class="timeline-description">Computational logic behind aligners and callers. Hidden Markov Models, Smith-Waterman, local alignment. Reading the code powering genomics software.</p>
+            <div class="timeline-tags">
+              <span class="mini-tag">HMM</span>
+              <span class="mini-tag">Smith-Waterman</span>
+              <span class="mini-tag">Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-number">05</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-search"></i></div>
+            <h3 class="timeline-title">Variant Interpretation & Annotation</h3>
+            <span class="timeline-badge">Advanced</span>
+            <p class="timeline-description">ANNOVAR, VEP, gnomAD, 1000 Genomes, SIFT, PolyPhen, CADD scores. Learn to separate signal from noise in your variant calls.</p>
+            <div class="timeline-tags">
+              <span class="mini-tag">ANNOVAR</span>
+              <span class="mini-tag">VEP</span>
+              <span class="mini-tag">CADD</span>
+              <span class="mini-tag">gnomAD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <span class="timeline-number">06</span>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3 class="timeline-title">From Variants to Clinical Diagnosis</h3>
+            <span class="timeline-badge badge-core">Core Module</span>
+            <p class="timeline-description">ACMG/AMP guidelines, VUS classification, connecting genomic findings to real patient phenotypes, case study walkthroughs. Where genomics meets medicine.</p>
+            <div class="timeline-tags">
+              <span class="mini-tag">ACMG</span>
+              <span class="mini-tag">Clinical</span>
+              <span class="mini-tag">Case Studies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-emoji">🧠</span>
+          <h3 class="feature-title">Depth Over Commands</h3>
+          <p class="feature-description">We don't just teach you which buttons to press. We teach you why those buttons exist.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-emoji">🔬</span>
+          <h3 class="feature-title">Computational + Clinical</h3>
+          <p class="feature-description">Bridge the gap between computational genomics and clinical decision-making.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-emoji">💻</span>
+          <h3 class="feature-title">Coding the Genomics Way</h3>
+          <p class="feature-description">Hands-on coding with real genomic data. No toy examples, no shortcuts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
