@@ -30,6 +30,7 @@
       <a href="#format">Format</a>
       <a href="#instructors">Instructors</a>
       <a href="#pricing">Pricing</a>
+      <a href="#scholarship">Scholarship</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-cta">
@@ -43,6 +44,7 @@
     <a href="#format">Format</a>
     <a href="#instructors">Instructors</a>
     <a href="#pricing">Pricing</a>
+    <a href="#scholarship">Scholarship</a>
     <a href="#faq">FAQ</a>
     <a href="#pricing" class="btn btn--primary btn--block">Enrol in the next batch</a>
   </div>
@@ -55,12 +57,12 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="tag-row">
-        <span class="tag tag--live">● Batch 05 · Fri–Sun, 11–13 Sep 2026</span>
+        <span class="tag tag--live">● Batch 01 · Sat–Mon, 27–29 Jun 2026</span>
         <span class="tag">3 days · live online</span>
         <span class="tag">just ₹500</span>
       </div>
       <h1>Build a variant-calling pipeline <span class="u">yourself, step by step.</span></h1>
-      <p class="lede">A three-day, hands-on workshop. You take real sequencing reads and build a complete germline variant-calling pipeline — from FASTQ to an annotated VCF — using Linux and Python. No prior programming needed. We start from the basics of the command line.</p>
+      <p class="lede">In three days, you'll take real sequencing reads and build a complete germline variant-calling pipeline — from FASTQ to an annotated VCF — using Linux and Python. No programming experience needed. We start from the very basics.</p>
       <div class="hero-cta">
         <a href="#pricing" class="btn btn--primary">Enrol for ₹500 <span class="btn-arrow" aria-hidden="true">→</span></a>
         <a href="#curriculum" class="btn btn--ghost">See the day-by-day</a>
@@ -97,38 +99,20 @@
   </div>
 </div>
 
-<!-- ============ WHY ============ -->
+<!-- ============ WHO THIS IS FOR ============ -->
 <section class="section" id="about">
   <div class="wrap">
-    <div class="why-grid">
-      <div>
-        <p class="eyebrow">Who this is for</p>
-        <h2>You know the biology. The tooling is where it falls apart.</h2>
-        <p class="lede">Most people who end up doing NGS analysis were never taught the command line. You can read a paper on variant calling, but when you sit down with a folder of FASTQ files and a cluster login, the gap between "I understand this conceptually" and "I can actually run it" is wide — and lonely.</p>
-        <p>This workshop closes that gap the only way that works: you build the whole thing yourself, one step at a time, on data where the right answer is already known so you can check your work against truth.</p>
-      </div>
-      <div>
-        <ul class="check-list">
-          <li>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg>
-            <span><b>Wet-lab scientists & grad students</b> moving into sequencing analysis and tired of waiting on the bioinformatics core for every re-run.</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg>
-            <span><b>Clinicians & genetic counsellors</b> who need to understand what a VCF actually represents and where a call can go wrong.</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg>
-            <span><b>Career-switchers from CS or stats</b> who can code but have never touched a reference genome, a BAM file, or GATK best practices.</span>
-          </li>
-          <li>
-            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg>
-            <span><b>Anyone</b> who has run <code class="mono">nf-core/sarek</code> end-to-end but couldn't tell you what any single step inside it is doing.</span>
-          </li>
-        </ul>
-        <p class="muted" style="margin-top:1.4rem; font-size:.92rem;">Not sure you're ready? If you can open a terminal and type, you're ready. The honest prerequisites are <a href="#faq">in the FAQ</a>.</p>
-      </div>
+    <div class="section-head">
+      <p class="eyebrow">Who this is for</p>
+      <h2>You understand the biology. Now learn the tools.</h2>
     </div>
+    <div class="grid cols-4">
+      <div class="card"><h3>Wet-lab scientists & grad students</h3><p>Want to analyse your own sequencing data.</p></div>
+      <div class="card"><h3>Clinicians & genetic counsellors</h3><p>Need to understand what a VCF represents.</p></div>
+      <div class="card"><h3>CS or stats career-switchers</h3><p>Can code, but new to genomics file formats and tools.</p></div>
+      <div class="card"><h3>Pipeline users</h3><p>Have run <code class="mono">nf-core/sarek</code> but want to understand each step.</p></div>
+    </div>
+    <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.92rem;">No programming experience needed — we start from scratch. See the <a href="#faq">FAQ</a> for details.</p>
   </div>
 </section>
 
@@ -138,7 +122,7 @@
     <div class="section-head">
       <p class="eyebrow">The thing you'll build</p>
       <h2>One pipeline, eight stages, no black boxes.</h2>
-      <p class="lede">By the end of day three you'll have run and understood every stage below — from raw FASTQ to an annotated VCF — and seen how it gets automated. This is the GATK germline short-variant path, the same shape as production clinical pipelines.</p>
+      <p class="lede">By the end of day three, you'll have run every stage below — from raw FASTQ to an annotated VCF. This follows the GATK germline short-variant workflow, the same approach used in production clinical pipelines.</p>
     </div>
 
     <div class="snake">
@@ -154,7 +138,7 @@
     </div>
 
     <div class="grid cols-4" style="margin-top:clamp(34px,5vw,52px)">
-      <div class="stat"><div class="big"><em>~3.2M</em></div><div class="lab">reads in the practice set — a chr20 subset of GIAB sample NA12878, so labs finish in minutes on a laptop.</div></div>
+      <div class="stat"><div class="big"><em>~3.2M</em></div><div class="lab">reads in the practice dataset (chr20 subset of NA12878), small enough that labs finish in minutes on a regular laptop.</div></div>
       <div class="stat"><div class="big"><em>1</em></div><div class="lab">truth set to grade against. We benchmark your calls with <code class="mono">hap.py</code> against the GIAB high-confidence regions.</div></div>
       <div class="stat"><div class="big"><em>8</em></div><div class="lab">hands-on labs across the three days, each ending in output you can open in IGV and inspect by eye.</div></div>
       <div class="stat"><div class="big"><em>0</em></div><div class="lab">black boxes. If a tool does something, you'll know which flag did it and why it's there.</div></div>
@@ -168,7 +152,7 @@
     <div class="section-head">
       <p class="eyebrow">Day by day</p>
       <h2>Three days, built so each one unblocks the next.</h2>
-      <p class="lede">Each day pairs a live teaching session with hands-on labs you run yourself. Sessions are recorded. Everything runs in a pre-built conda environment, so you're learning variant calling on day one — not fighting installs.</p>
+      <p class="lede">Each day has a live teaching session followed by hands-on labs you run yourself. Sessions are recorded. Everything runs in a pre-built conda environment so you spend your time on the actual analysis, not on setup.</p>
     </div>
 
     <div class="syllabus">
@@ -258,16 +242,16 @@
 <section class="section section--tint" id="outcomes">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">By the last session</p>
-      <h2>What you'll be able to do on your own.</h2>
+      <p class="eyebrow">Outcomes</p>
+      <h2>What you'll walk away with.</h2>
     </div>
     <div class="grid cols-3">
-      <div class="card"><span class="num">01</span><h3>Take FASTQ to VCF unaided</h3><p>Sit down with raw reads from a new sample and produce a filtered, annotated VCF without a tutorial open in the other window.</p></div>
-      <div class="card"><span class="num">02</span><h3>Read a pipeline and judge it</h3><p>Open someone else's workflow — or an nf-core module — and understand what each step does, what could break, and where calls get lost.</p></div>
-      <div class="card"><span class="num">03</span><h3>Live on the command line</h3><p>Move around a cluster, write a loop over 50 samples, chain tools with pipes, and stop reaching for a GUI for routine work.</p></div>
-      <div class="card"><span class="num">04</span><h3>Tell a good call from a bad one</h3><p>Pull a variant up in IGV, read the genotype fields, and form your own view on whether to trust it — not just whether it says PASS.</p></div>
-      <div class="card"><span class="num">05</span><h3>Make work reproducible</h3><p>Pin a conda environment and write scripts someone else can run on their own machine and get the same result you did.</p></div>
-      <div class="card"><span class="num">06</span><h3>Know what to learn next</h3><p>Leave with an honest map of the field — somatic, joint-genotyping, structural variants — and the vocabulary to teach yourself the rest.</p></div>
+      <div class="card"><span class="num">01</span><h3>Run FASTQ → VCF independently</h3></div>
+      <div class="card"><span class="num">02</span><h3>Read and evaluate any pipeline</h3></div>
+      <div class="card"><span class="num">03</span><h3>Work confidently on the command line</h3></div>
+      <div class="card"><span class="num">04</span><h3>Tell a good variant call from a bad one</h3></div>
+      <div class="card"><span class="num">05</span><h3>Make your analysis reproducible</h3></div>
+      <div class="card"><span class="num">06</span><h3>Know what to learn next</h3></div>
     </div>
   </div>
 </section>
@@ -279,7 +263,7 @@
       <div>
         <p class="eyebrow">How it runs</p>
         <h2>Small, live, and built around the lab — not the lecture.</h2>
-        <p>Batches are capped at 24 so the instructors actually know your name and can look at your terminal when something breaks. Live sessions are for working through problems together; the heavy lifting happens in the hands-on labs, with help a WhatsApp message away.</p>
+        <p>Each batch is limited to 30 students so the instructors can give proper attention to everyone. If more than 30 people register, additional students are moved to the next batch. Live sessions are for working through problems together; the main learning happens in the hands-on labs, with help available on WhatsApp.</p>
         <ul class="check-list" style="margin-top:1.4rem">
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg><span><b>Three live sessions, one per day</b>, 10:00 AM – 1:30 PM IST across Fri–Sun. Always recorded.</span></li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg><span><b>Hands-on labs each afternoon</b> you work through at your own pace, with the lab guide to keep.</span></li>
@@ -294,11 +278,11 @@
           </div>
           <div style="padding:8px 24px 22px;">
             <dl style="margin:0;">
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Next batch</dt><dd style="margin:0; font-weight:600;">Fri–Sun, 11–13 Sep 2026</dd></div>
+              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Next batch</dt><dd style="margin:0; font-weight:600;">Sat–Mon, 27–29 Jun 2026</dd></div>
               <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Length</dt><dd style="margin:0; font-weight:600;">3 days (~10 hrs total)</dd></div>
               <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Fee</dt><dd style="margin:0; font-weight:600;">₹500 (all three days)</dd></div>
               <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Format</dt><dd style="margin:0; font-weight:600;">Live online + recordings</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Batch size</dt><dd style="margin:0; font-weight:600;">24 max</dd></div>
+              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Batch size</dt><dd style="margin:0; font-weight:600;">30 max</dd></div>
               <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Prerequisites</dt><dd style="margin:0; font-weight:600;">None — we start from scratch</dd></div>
               <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">You'll need</dt><dd style="margin:0; font-weight:600; text-align:right;">A laptop · ~20 GB free disk</dd></div>
               <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0;"><dt class="muted">Certificate</dt><dd style="margin:0; font-weight:600;">On completing the labs</dd></div>
@@ -317,7 +301,7 @@
     <div class="section-head">
       <p class="eyebrow">Who teaches it</p>
       <h2>People who run these pipelines for a living.</h2>
-      <p class="lede">Not full-time course producers — working bioinformaticians who still spend their weeks staring at BAM files, and who remember exactly how confusing this was the first time.</p>
+      <p class="lede">Working bioinformaticians who spend their days on real genomics projects and remember what it was like to learn this from scratch.</p>
     </div>
     <div class="grid cols-2">
       <div class="card person">
@@ -325,8 +309,8 @@
         <div>
           <h3>Hiba Ali</h3>
           <div class="role">Instructor · Research Scientist, University Hospital Ulm</div>
-          <p>Started out as a Research Associate at the Centre for Brain Research (CBR), IISc, and is now a research scientist at University Hospital Ulm. Works on whole-genome sequencing in neurological disease — most recently a study of 197 Parkinson's cases that surfaced novel pathogenic variants in the Indian population.</p>
-          <div class="links"><a href="https://www.medrxiv.org/content/10.1101/2025.10.19.25338055v1" target="_blank" rel="noopener">Parkinson's WGS paper ↗</a></div>
+          <p>Former Research Associate at the Centre for Brain Research (CBR), IISc, now a research scientist at University Hospital Ulm. Her current work focuses on whole-genome sequencing in neurological disease, including a study of 197 Parkinson's cases that identified novel pathogenic variants in the Indian population.</p>
+          <div class="links"><a href="https://www.linkedin.com/in/hiba-ali-09b396253/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.medrxiv.org/content/10.1101/2025.10.19.25338055v1" target="_blank" rel="noopener">Parkinson's WGS paper ↗</a></div>
         </div>
       </div>
       <div class="card person">
@@ -334,12 +318,12 @@
         <div>
           <h3>Bikram Kumar Panda</h3>
           <div class="role">Instructor · PhD candidate, IISc — bioinformatics &amp; HPC</div>
-          <p>PhD candidate at IISc building bioinformatics tools and HPC applications for genomics. Has trained college faculty under NIELIT programmes, so he's used to taking people from "never opened a terminal" to running real pipelines themselves.</p>
-          <div class="links"><a href="#">GitHub</a></div>
+          <p>PhD candidate at IISc, working on bioinformatics tools and high-performance computing for genomics. Has previously trained college faculty through NIELIT programmes.</p>
+          <div class="links"><a href="https://www.linkedin.com/in/bikram-kumar-panda-06412ab6/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.github.com/bpanda-dev" target="_blank" rel="noopener">GitHub</a></div>
         </div>
       </div>
     </div>
-    <p class="muted" style="margin-top:1.6rem; font-size:.9rem;">Batches of this size are co-taught, with a teaching assistant in the WhatsApp group and the follow-up session.</p>
+    <p class="muted" style="margin-top:1.6rem; font-size:.9rem;">Both instructors teach every batch, with a teaching assistant available in the WhatsApp group and the follow-up session.</p>
   </div>
 </section>
 
@@ -349,11 +333,11 @@
     <div class="section-head" style="text-align:center; margin-inline:auto;">
       <p class="eyebrow" style="justify-content:center;">Enrol</p>
       <h2>Three days. One simple fee.</h2>
-      <p class="lede" style="margin-inline:auto;">No tiers, no upsells. ₹500 covers all three days, the dataset, the materials and the certificate. We keep it cheap on purpose — we'd much rather have you in the room than price you out.</p>
+      <p class="lede" style="margin-inline:auto;">₹500 covers all three days, the dataset, the materials and the certificate. No tiers, no upsells. We've kept the fee low so it's accessible to everyone.</p>
     </div>
     <div class="price-grid is-single">
       <div class="plan is-featured">
-        <span class="ribbon">Batch 05 · 11–13 Sep</span>
+        <span class="ribbon">Batch 01 · 27–29 Jun</span>
         <h3>The 3-day workshop</h3>
         <p class="who">Everything, for everyone — students, researchers and working professionals alike.</p>
         <div class="amt">₹500 <small>only</small></div>
@@ -365,10 +349,34 @@
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> Lifetime access to slides, commands &amp; lab guides</li>
           <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> Certificate on completing the labs</li>
         </ul>
-        <a href="mailto:hello@deepdivegenomics.com?subject=Batch%2005%20enrolment%20(%E2%82%B9500)" class="btn btn--ghost btn--block">Enrol in Batch 05 — ₹500</a>
+        <a href="mailto:deepdivegenomics@gmail.com?subject=Batch%2001%20enrolment%20(%E2%82%B9500)" class="btn btn--ghost btn--block">Enrol in Batch 01 — ₹500</a>
       </div>
     </div>
-    <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.9rem;">Pay by UPI or card on the enrolment page. A few free seats are held each batch for students who genuinely can't afford ₹500 — just email us and ask, no awkward questions.</p>
+    <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.9rem;">Pay by UPI or card on the enrolment page. Each batch is limited to 30 students — if we're full, you'll be offered a spot in the next one.</p>
+  </div>
+</section>
+
+<!-- ============ SCHOLARSHIP ============ -->
+<section class="section section--tint" id="scholarship">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center; margin-inline:auto;">
+      <p class="eyebrow" style="justify-content:center;">Scholarship</p>
+      <h2>Need a fee reduction? Apply for a scholarship spot.</h2>
+      <p class="lede" style="margin-inline:auto;">We set aside 6 seats per batch (out of 30) at a reduced fee. These are for students who genuinely need the help — no complicated process, just an honest email.</p>
+    </div>
+    <div class="price-grid is-single">
+      <div class="card" style="text-align:center; padding:clamp(28px,4vw,40px);">
+        <div style="font-family:var(--mono); font-size:.76rem; letter-spacing:.1em; color:var(--teal-deep); text-transform:uppercase; margin-bottom:1.2em;">6 scholarship seats per batch</div>
+        <h3 style="font-size:1.15rem; margin-bottom:.8em;">How to apply</h3>
+        <ol style="text-align:left; max-width:48ch; margin:0 auto 1.6em; padding-left:1.3rem; color:var(--ink-soft); font-size:.95rem; display:grid; gap:.6rem;">
+          <li>Send an email to <a href="mailto:deepdivegenomics@gmail.com?subject=Scholarship%20application%20—%20Batch%2001">deepdivegenomics@gmail.com</a></li>
+          <li>Attach your CV</li>
+          <li>Write a short note explaining why you'd like a fee reduction</li>
+        </ol>
+        <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.4em;">That's it. We review applications on a rolling basis and get back within a few days.</p>
+        <a href="mailto:deepdivegenomics@gmail.com?subject=Scholarship%20application%20—%20Batch%2001" class="btn btn--primary">Apply for a scholarship seat <span class="btn-arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -376,13 +384,13 @@
 <section class="section" id="faq">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Honest answers</p>
-      <h2>Questions people actually ask.</h2>
+      <p class="eyebrow">FAQ</p>
+      <h2>Common questions</h2>
     </div>
     <div class="faq">
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>Do I need to know how to program?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>No. Day 1 starts at the very beginning of the command line and introduces just-enough Python — the small, practical subset you need to wrangle variant tables, not a computer-science course. If you've never written a line of code, you're exactly who this is built for. If you already code but don't know genomics, you'll move quickly on day one and find your feet from day two.</p></div>
+        <div class="qa-a"><p>No. Day 1 starts from the very beginning — basic command line usage and just enough Python to work with variant tables. If you've never written code before, this workshop is designed for you. If you already code but are new to genomics, you'll move through day one quickly and get into the biology from day two.</p></div>
       </div>
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>What kind of computer do I need? Does it have to be a Mac?</span><span class="pm" aria-hidden="true">+</span></button>
@@ -390,23 +398,23 @@
       </div>
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>Is this clinical or research focused?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>The germline short-variant pipeline you build is the same shape used in both research and many diagnostic settings, so the skills transfer either way. That said, this is an educational workshop — it is not accredited clinical training, and nothing here should be used to make patient decisions. We're upfront about where the line is.</p></div>
+        <div class="qa-a"><p>The germline short-variant pipeline you build follows the same workflow used in both research and diagnostic settings, so the skills apply to either. That said, this is an educational workshop — it is not accredited clinical training and should not be used for patient decisions.</p></div>
       </div>
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>Can I bring my own data?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>For the labs, everyone uses the same well-characterised sample so we can grade calls against a known truth set — that's pedagogically important. But the follow-up session is the place for your own data: bring a BAM or a FASTQ and we'll look at it together. Several past participants left with the start of a pipeline for their own project.</p></div>
+        <div class="qa-a"><p>During the labs, everyone uses the same well-characterised sample so we can compare calls against a known truth set. The follow-up session is a good place to bring your own data — share a BAM or a FASTQ and we'll work through it together.</p></div>
       </div>
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>What if I miss a live session?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>Every session is recorded and posted the same day, and the labs are yours to do at your own pace. People who can't make a live slot routinely take the whole thing from the recordings plus the WhatsApp group. You won't fall behind for missing a day.</p></div>
+        <div class="qa-a"><p>Every session is recorded and shared the same day. The labs can be done at your own pace. If you miss a live session, you can catch up from the recording and ask questions in the WhatsApp group.</p></div>
       </div>
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>How is this different from a free YouTube tutorial?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>It isn't different in the facts — those are out there for free, and we'll point you to good ones. It's different in that someone looks at <em>your</em> broken command, in a small batch, over three focused days that make you actually finish. Most people don't get stuck because the information is missing; they get stuck because there's no one to ask and nothing keeping them going. That's what you're paying for.</p></div>
+        <div class="qa-a"><p>The information itself is freely available online. What's different here is structure, feedback, and a small batch where someone actually looks at your work. You get three focused days with instructors who can help when you're stuck — which is usually what stops self-learners from finishing.</p></div>
       </div>
       <div class="qa">
         <button class="qa-q" aria-expanded="false"><span>I'm not sure it's the right level for me.</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>Email us at <a href="mailto:hello@deepdivegenomics.com">hello@deepdivegenomics.com</a> and tell us where you're coming from — we'll tell you honestly whether this batch is right for you, or point you to something better to do first. We'd rather lose a ₹500 sale than have you in the wrong room.</p></div>
+        <div class="qa-a"><p>Email us at <a href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a> and tell us about your background. We'll let you know whether this batch is a good fit, or suggest something else to start with.</p></div>
       </div>
     </div>
   </div>
@@ -436,8 +444,8 @@
       <div class="foot-col">
         <h4>Organisation</h4>
         <a href="#instructors">Instructors</a>
-        <a href="mailto:hello@deepdivegenomics.com">Contact</a>
-        <a href="#">Scholarships</a>
+        <a href="mailto:deepdivegenomics@gmail.com">Contact</a>
+        <a href="#scholarship">Scholarship</a>
       </div>
       <div class="foot-col">
         <h4>Get batch dates</h4>
@@ -450,7 +458,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 DeepDiveGenomics. An independent workshop, not affiliated with the Broad Institute, Ensembl, or GATK.</span>
-      <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="mailto:hello@deepdivegenomics.com">hello@deepdivegenomics.com</a></span>
+      <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a></span>
     </div>
   </div>
 </footer>
