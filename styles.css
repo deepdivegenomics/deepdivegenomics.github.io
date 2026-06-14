@@ -174,7 +174,7 @@ img, svg { max-width: 100%; }
 
 /* ---------- hero ---------- */
 .hero { padding: clamp(36px, 5vw, 72px) 0 clamp(48px, 7vw, 88px); position: relative; }
-.hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
 /* let the grid columns shrink so the terminal scrolls internally instead of
    forcing horizontal page scroll on narrow screens */
 .hero-copy, .hero-media { min-width: 0; }
@@ -202,8 +202,8 @@ img, svg { max-width: 100%; }
   box-shadow: var(--shadow-lg);
   overflow: hidden;
   font-family: var(--mono);
-  font-size: .8rem;
-  line-height: 1.7;
+  font-size: clamp(0.58rem, 1.1vw, 0.78rem);
+  line-height: 1.4;
   color: var(--term-fg);
   position: relative;
 }
@@ -216,11 +216,10 @@ img, svg { max-width: 100%; }
 .term-bar i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
 .term-bar i:nth-child(1){ background:#e0655b; } .term-bar i:nth-child(2){ background:#d9ab53; } .term-bar i:nth-child(3){ background:#5fb350; }
 .term-title { margin-left: .6rem; color: var(--term-dim); font-size: .72rem; }
-.term-body { padding: .95rem 1.05rem 1.1rem; overflow-x: hidden; }
-.term-body pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
+.term-body { padding: .95rem 1.05rem 1.1rem; overflow-x: auto; }
+.term-body pre { margin: 0; white-space: pre; }
 @media (max-width: 760px) {
   .term-body { overflow-x: auto; }
-  .term-body pre { white-space: pre; word-break: normal; }
 }
 .term-body .l { display: block; }
 .tp { color: var(--term-green); }              /* prompt $ */
