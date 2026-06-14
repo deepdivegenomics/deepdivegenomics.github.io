@@ -216,8 +216,12 @@ img, svg { max-width: 100%; }
 .term-bar i { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
 .term-bar i:nth-child(1){ background:#e0655b; } .term-bar i:nth-child(2){ background:#d9ab53; } .term-bar i:nth-child(3){ background:#5fb350; }
 .term-title { margin-left: .6rem; color: var(--term-dim); font-size: .72rem; }
-.term-body { padding: .95rem 1.05rem 1.1rem; overflow-x: auto; }
-.term-body pre { margin: 0; white-space: pre; }
+.term-body { padding: .95rem 1.05rem 1.1rem; overflow-x: hidden; }
+.term-body pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
+@media (max-width: 760px) {
+  .term-body { overflow-x: auto; }
+  .term-body pre { white-space: pre; word-break: normal; }
+}
 .term-body .l { display: block; }
 .tp { color: var(--term-green); }              /* prompt $ */
 .tc { color: var(--term-cyan); }               /* command */
