@@ -1,30 +1,63 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DeepDiveGenomics — Variant Calling Pipelines: a hands-on 3-day workshop in Linux, Python & NGS</title>
-<meta name="description" content="A hands-on 3-day workshop where you build a complete germline variant-calling pipeline from raw FASTQ to annotated VCF — using BWA-MEM, samtools, GATK4 and bcftools on real data. Linux + Python from scratch. ₹500.">
-<meta property="og:title" content="DeepDiveGenomics — Variant Calling Pipelines Workshop">
-<meta property="og:description" content="Build a real germline variant-calling pipeline from FASTQ to annotated VCF in 3 days. Linux, Python, GATK4, BWA-MEM, samtools. Small batches, ₹500.">
-<meta property="og:type" content="website">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header" id="top">
-  <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="DeepDiveGenomics home">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f1115"/><g fill="none" stroke="#2bb39a" stroke-width="2" stroke-linecap="round"><path d="M11 5c0 5.5 10 5.5 10 11s-10 5.5-10 11"/><path d="M21 5c0 5.5-10 5.5-10 11s10 5.5 10 11"/></g><g stroke="#d8c26a" stroke-width="1.6" stroke-linecap="round"><path d="M12.2 9.5h7.6"/><path d="M13.4 13h5.2"/><path d="M13.4 19h5.2"/><path d="M12.2 22.5h7.6"/></g></svg>
-      <span>Deep<b class="brand-deep">Dive</b>Genomics</span>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepDiveGenomics — Variant Calling Pipelines: a hands-on 3-day workshop in Linux, Python & NGS</title>
+  <meta name="description"
+    content="A hands-on 3-day workshop where you build a complete germline variant-calling pipeline from raw FASTQ to annotated VCF — using BWA-MEM, samtools, GATK4 and bcftools on real data. Linux + Python from scratch. ₹500.">
+  <meta property="og:title" content="DeepDiveGenomics — Variant Calling Pipelines Workshop">
+  <meta property="og:description"
+    content="Build a real germline variant-calling pipeline from FASTQ to annotated VCF in 3 days. Linux, Python, GATK4, BWA-MEM, samtools. Small batches, ₹500.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="DeepDiveGenomics home">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#0f1115" />
+          <g fill="none" stroke="#2bb39a" stroke-width="2" stroke-linecap="round">
+            <path d="M11 5c0 5.5 10 5.5 10 11s-10 5.5-10 11" />
+            <path d="M21 5c0 5.5-10 5.5-10 11s10 5.5 10 11" />
+          </g>
+          <g stroke="#d8c26a" stroke-width="1.6" stroke-linecap="round">
+            <path d="M12.2 9.5h7.6" />
+            <path d="M13.4 13h5.2" />
+            <path d="M13.4 19h5.2" />
+            <path d="M12.2 22.5h7.6" />
+          </g>
+        </svg>
+        <span>Deep<b class="brand-deep">Dive</b>Genomics</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#curriculum">Curriculum</a>
+        <a href="#pipeline">The pipeline</a>
+        <a href="#format">Format</a>
+        <a href="#instructors">Instructors</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#scholarship">Scholarship</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#pricing" class="btn btn--ghost">Enrol</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobileMenu"><span></span></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
       <a href="#curriculum">Curriculum</a>
       <a href="#pipeline">The pipeline</a>
       <a href="#format">Format</a>
@@ -32,437 +65,659 @@
       <a href="#pricing">Pricing</a>
       <a href="#scholarship">Scholarship</a>
       <a href="#faq">FAQ</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="#pricing" class="btn btn--ghost">Enrol</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span></button>
+      <a href="#pricing" class="btn btn--primary btn--block">Enrol in the next batch</a>
     </div>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#curriculum">Curriculum</a>
-    <a href="#pipeline">The pipeline</a>
-    <a href="#format">Format</a>
-    <a href="#instructors">Instructors</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#scholarship">Scholarship</a>
-    <a href="#faq">FAQ</a>
-    <a href="#pricing" class="btn btn--primary btn--block">Enrol in the next batch</a>
-  </div>
-</header>
+  </header>
 
-<main id="main">
+  <main id="main">
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <div class="tag-row">
-        <span class="tag tag--live">● Batch 01 · Sat–Mon, 27–29 Jun 2026</span>
-        <span class="tag">3 days · live online</span>
-        <span class="tag">just ₹500</span>
-      </div>
-      <h1>Build a variant-calling pipeline <span class="u">yourself, step by step.</span></h1>
-      <p class="lede">In three days, you'll take real sequencing reads and build a complete germline variant-calling pipeline — from FASTQ to an annotated VCF — using Linux and Python. No programming experience needed. We start from the very basics.</p>
-      <div class="hero-cta">
-        <a href="#pricing" class="btn btn--primary">Enrol for ₹500 <span class="btn-arrow" aria-hidden="true">→</span></a>
-        <a href="#curriculum" class="btn btn--ghost">See the day-by-day</a>
-      </div>
-    </div>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="tag-row">
+            <span class="tag tag--live">● Batch 01 · Sat–Mon, 27–29 Jun 2026</span>
+            <span class="tag">3 days · live online</span>
+          </div>
+          <h1>Build a variant-calling pipeline <span class="u">yourself, step by step.</span></h1>
+          <p class="lede">In three days, you'll take real sequencing reads and build a complete germline variant-calling
+            pipeline — from FASTQ to an annotated VCF — using Linux and Python. No programming experience needed. We
+            start from the very basics.</p>
+          <div class="hero-cta">
+            <a href="#pricing" class="btn btn--primary">Enrol for ₹500 <span class="btn-arrow"
+                aria-hidden="true">→</span></a>
+            <a href="#curriculum" class="btn btn--ghost">See the day-by-day</a>
+          </div>
+        </div>
 
-    <div class="hero-media">
-      <div class="terminal" role="img" aria-label="Terminal showing a variant-calling pipeline: bwa mem aligning reads, samtools sorting, GATK HaplotypeCaller, and a variant line from the output VCF.">
-        <div class="term-bar"><i></i><i></i><i></i><span class="term-title">~/ddg/lab04 — bash — 92×24</span></div>
-        <div class="term-body"><pre><span class="l"><span class="td"># Day 2 — align reads to GRCh38 (chr20 subset)</span></span><span class="l"><span class="tp">$</span> <span class="tc">bwa mem</span> <span class="tf">-t 4</span> -R <span class="tf">'@RG\tID:NA12878\tSM:NA12878\tPL:ILLUMINA'</span> \</span><span class="l">    ref/GRCh38_chr20.fa reads/NA12878_R1.fq.gz reads/NA12878_R2.fq.gz \</span><span class="l">    | <span class="tc">samtools sort</span> <span class="tf">-@4 -o</span> aln/NA12878.sort.bam</span><span class="l"><span class="td">[main] Real time: 38.6 sec; CPU: 142.0 sec</span></span><span class="l"> </span><span class="l"><span class="td"># Day 3 — call germline variants</span></span><span class="l"><span class="tp">$</span> <span class="tc">gatk HaplotypeCaller</span> <span class="tf">-R</span> ref/GRCh38_chr20.fa \</span><span class="l">    <span class="tf">-I</span> aln/NA12878.markdup.bqsr.bam <span class="tf">-O</span> vcf/NA12878.vcf.gz</span><span class="l"><span class="td">ProgressMeter — 100% complete in 1.4 min</span></span><span class="l"> </span><span class="l"><span class="tp">$</span> <span class="tc">bcftools view</span> <span class="tf">-H</span> vcf/NA12878.vcf.gz | <span class="tc">head -1</span></span><span class="l"><span class="tw">chr20  3186161  rs2236639  G  A  </span><span class="tk">932</span><span class="tw">  PASS  AC=2;AF=1.00</span></span><span class="l"><span class="tp">$</span> <span class="cursor"></span></span></pre></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TOOL STRIP ============ -->
-<div class="toolstrip">
-  <div class="wrap">
-    <span class="label">You'll work hands-on with</span>
-    <div class="tools">
-      <span class="tool-chip"><b>bash</b> / GNU coreutils</span>
-      <span class="tool-chip"><b>Python</b> 3 · pandas</span>
-      <span class="tool-chip">BWA-MEM</span>
-      <span class="tool-chip">samtools</span>
-      <span class="tool-chip">bcftools</span>
-      <span class="tool-chip">GATK4</span>
-      <span class="tool-chip">FastQC · MultiQC</span>
-      <span class="tool-chip">fastp</span>
-      <span class="tool-chip">Ensembl VEP</span>
-      <span class="tool-chip">IGV</span>
-      <span class="tool-chip">conda / mamba</span>
-      <span class="tool-chip">Nextflow</span>
-    </div>
-  </div>
-</div>
-
-<!-- ============ WHO THIS IS FOR ============ -->
-<section class="section" id="about">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Who this is for</p>
-      <h2>You understand the biology. Now learn the tools.</h2>
-    </div>
-    <div class="grid cols-4">
-      <div class="card"><h3>Wet-lab scientists & grad students</h3><p>Want to analyse your own sequencing data.</p></div>
-      <div class="card"><h3>Clinicians & genetic counsellors</h3><p>Need to understand what a VCF represents.</p></div>
-      <div class="card"><h3>CS or stats career-switchers</h3><p>Can code, but new to genomics file formats and tools.</p></div>
-      <div class="card"><h3>Pipeline users</h3><p>Have run <code class="mono">nf-core/sarek</code> but want to understand each step.</p></div>
-    </div>
-    <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.92rem;">No programming experience needed — we start from scratch. See the <a href="#faq">FAQ</a> for details.</p>
-  </div>
-</section>
-
-<!-- ============ PIPELINE ============ -->
-<section class="section section--tint" id="pipeline">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">The thing you'll build</p>
-      <h2>One pipeline, eight stages, no black boxes.</h2>
-      <p class="lede">By the end of day three, you'll have run every stage below — from raw FASTQ to an annotated VCF. This follows the GATK germline short-variant workflow, the same approach used in production clinical pipelines.</p>
-    </div>
-
-    <div class="snake">
-      <div class="snode is-input to-right"><span class="snum">01</span><div class="sbody"><h4>Raw reads</h4><span class="stool">FASTQ.gz</span></div></div>
-      <div class="snode to-down"><span class="snum">02</span><div class="sbody"><h4>QC &amp; trim</h4><span class="stool">FastQC · fastp</span></div></div>
-      <div class="snode to-left"><span class="snum">03</span><div class="sbody"><h4>Align reads</h4><span class="stool">BWA-MEM → GRCh38</span></div></div>
-      <div class="snode to-down"><span class="snum">04</span><div class="sbody"><h4>Sort &amp; dedup</h4><span class="stool">samtools · Picard</span></div></div>
-      <div class="snode to-right"><span class="snum">05</span><div class="sbody"><h4>Recalibrate</h4><span class="stool">GATK BQSR</span></div></div>
-      <div class="snode to-down"><span class="snum">06</span><div class="sbody"><h4>Call variants</h4><span class="stool">HaplotypeCaller</span></div></div>
-      <div class="snode to-left"><span class="snum">07</span><div class="sbody"><h4>Filter</h4><span class="stool">hard filters · VQSR</span></div></div>
-      <div class="snode to-down"><span class="snum">08</span><div class="sbody"><h4>Annotate</h4><span class="stool">Ensembl VEP</span></div></div>
-      <div class="snake-end"><strong>Analysis-ready VCF</strong><span>filtered &amp; annotated</span></div>
-    </div>
-
-    <div class="grid cols-4" style="margin-top:clamp(34px,5vw,52px)">
-      <div class="stat"><div class="big"><em>~3.2M</em></div><div class="lab">reads in the practice dataset (chr20 subset of NA12878), small enough that labs finish in minutes on a regular laptop.</div></div>
-      <div class="stat"><div class="big"><em>1</em></div><div class="lab">truth set to grade against. We benchmark your calls with <code class="mono">hap.py</code> against the GIAB high-confidence regions.</div></div>
-      <div class="stat"><div class="big"><em>8</em></div><div class="lab">hands-on labs across the three days, each ending in output you can open in IGV and inspect by eye.</div></div>
-      <div class="stat"><div class="big"><em>0</em></div><div class="lab">black boxes. If a tool does something, you'll know which flag did it and why it's there.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CURRICULUM ============ -->
-<section class="section" id="curriculum">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Day by day</p>
-      <h2>Three days, built so each one unblocks the next.</h2>
-      <p class="lede">Each day has a live teaching session followed by hands-on labs you run yourself. Sessions are recorded. Everything runs in a pre-built conda environment so you spend your time on the actual analysis, not on setup.</p>
-    </div>
-
-    <div class="syllabus">
-      <!-- Day 1 -->
-      <div class="week">
-        <button class="week-head" aria-expanded="true" aria-controls="w1">
-          <span class="week-tag">Day 1</span>
-          <span class="week-title">Linux &amp; Python — the ground you'll stand on
-            <span class="week-sub">The command line, plus just-enough Python to handle genomic data</span>
-          </span>
-          <span class="week-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="week-panel" id="w1">
-          <div class="week-panel-inner">
-            <ul>
-              <li>Navigating a real filesystem: paths, <code class="mono">ls -lh</code>, globbing, tab-completion, and where your data actually lives on a server.</li>
-              <li>Pipes and redirection — the single idea that makes the whole toolchain compose. Counting reads in a FASTQ with <code class="mono">zcat | wc -l</code> before any "real" tool.</li>
-              <li><code class="mono">grep</code>, <code class="mono">awk</code>, <code class="mono">sort</code>, <code class="mono">cut</code> on tab-delimited genomics files — the daily-driver skills no tutorial teaches you.</li>
-              <li>Writing a bash loop over many samples, with variables, permissions, <code class="mono">chmod +x</code> and the shebang line.</li>
-              <li>Reproducible environments with conda/mamba — then your first Python: reading files, loading a table with pandas, and a quick plot.</li>
-            </ul>
-            <div class="week-meta">
-              <span><b>Labs —</b> set up your environment, write a sample-sheet parser in bash, and read your first file in Python.</span>
-              <span><b>Outcome:</b> at home both in a terminal and in a Python script.</span>
+        <div class="hero-media">
+          <div class="terminal" role="img"
+            aria-label="Terminal showing a variant-calling pipeline: bwa mem aligning reads, samtools sorting, GATK HaplotypeCaller, and a variant line from the output VCF.">
+            <div class="term-bar"><i></i><i></i><i></i><span class="term-title">~/ddg/lab04 — bash — 92×24</span></div>
+            <div class="term-body">
+              <pre><span class="l"><span class="td"># Day 2 — align reads to GRCh38 (chr20 subset)</span></span><span class="l"><span class="tp">$</span> <span class="tc">bwa mem</span> <span class="tf">-t 4</span> -R <span class="tf">'@RG\tID:NA12878\tSM:NA12878\tPL:ILLUMINA'</span> \</span><span class="l">    ref/GRCh38_chr20.fa reads/NA12878_R1.fq.gz reads/NA12878_R2.fq.gz \</span><span class="l">    | <span class="tc">samtools sort</span> <span class="tf">-@4 -o</span> aln/NA12878.sort.bam</span><span class="l"><span class="td">[main] Real time: 38.6 sec; CPU: 142.0 sec</span></span><span class="l"> </span><span class="l"><span class="td"># Day 3 — call germline variants</span></span><span class="l"><span class="tp">$</span> <span class="tc">gatk HaplotypeCaller</span> <span class="tf">-R</span> ref/GRCh38_chr20.fa \</span><span class="l">    <span class="tf">-I</span> aln/NA12878.markdup.bqsr.bam <span class="tf">-O</span> vcf/NA12878.vcf.gz</span><span class="l"><span class="td">ProgressMeter — 100% complete in 1.4 min</span></span><span class="l"> </span><span class="l"><span class="tp">$</span> <span class="tc">bcftools view</span> <span class="tf">-H</span> vcf/NA12878.vcf.gz | <span class="tc">head -1</span></span><span class="l"><span class="tw">chr20  3186161  rs2236639  G  A  </span><span class="tk">932</span><span class="tw">  PASS  AC=2;AF=1.00</span></span><span class="l"><span class="tp">$</span> <span class="cursor"></span></span></pre>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Day 2 -->
-      <div class="week">
-        <button class="week-head" aria-expanded="false" aria-controls="w2">
-          <span class="week-tag">Day 2</span>
-          <span class="week-title">Reads, references, and alignment
-            <span class="week-sub">FASTQ → BAM: what's in the files and how to map them honestly</span>
-          </span>
-          <span class="week-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="week-panel" id="w2">
-          <div class="week-panel-inner">
-            <ul>
-              <li>Anatomy of a FASTQ record and Phred quality scores — reading them, not just trusting them.</li>
-              <li>Quality control with FastQC + MultiQC: spotting adapter contamination and over-represented sequences, then trimming with fastp.</li>
-              <li>Reference genomes: GRCh38 vs hg19, why the build matters, and indexing with <code class="mono">bwa index</code> / <code class="mono">samtools faidx</code>.</li>
-              <li>Aligning with BWA-MEM, read groups (and why every downstream tool nags you about them), and the SAM/BAM format field by field.</li>
-              <li>Sorting, indexing, marking duplicates, and reading a <code class="mono">samtools flagstat</code> report critically.</li>
-            </ul>
-            <div class="week-meta">
-              <span><b>Lab —</b> align NA12878, mark duplicates, and view your BAM in IGV.</span>
-              <span><b>Outcome:</b> an analysis-ready, deduplicated BAM you built yourself.</span>
+    <!-- ============ TOOL STRIP ============ -->
+    <div class="toolstrip">
+      <div class="wrap">
+        <span class="label">You'll work hands-on with</span>
+        <div class="tools">
+          <span class="tool-chip"><b>bash</b> / GNU coreutils</span>
+          <span class="tool-chip"><b>Python</b> 3 · pandas</span>
+          <span class="tool-chip">BWA-MEM</span>
+          <span class="tool-chip">samtools</span>
+          <span class="tool-chip">bcftools</span>
+          <span class="tool-chip">GATK4</span>
+          <span class="tool-chip">FastQC · MultiQC</span>
+          <span class="tool-chip">fastp</span>
+          <span class="tool-chip">Ensembl VEP</span>
+          <span class="tool-chip">IGV</span>
+          <span class="tool-chip">conda / mamba</span>
+          <span class="tool-chip">Nextflow</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ WHO THIS IS FOR ============ -->
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Who this is for</p>
+          <h2>You understand the biology. Now learn the tools.</h2>
+        </div>
+        <div class="grid cols-4">
+          <div class="card">
+            <h3>Wet-lab scientists & grad students</h3>
+            <p>Want to analyse your own sequencing data.</p>
+          </div>
+          <div class="card">
+            <h3>Clinicians & genetic counsellors</h3>
+            <p>Need to understand what a VCF represents.</p>
+          </div>
+          <div class="card">
+            <h3>CS or stats career-switchers</h3>
+            <p>Can code, but new to genomics file formats and tools.</p>
+          </div>
+          <div class="card">
+            <h3>Pipeline users</h3>
+            <p>Have run <code class="mono">nf-core/sarek</code> but want to understand each step.</p>
+          </div>
+        </div>
+        <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.92rem;">No programming experience
+          needed — we start from scratch. See the <a href="#faq">FAQ</a> for details.</p>
+      </div>
+    </section>
+
+    <!-- ============ PIPELINE ============ -->
+    <section class="section section--tint" id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">The thing you'll build</p>
+          <h2>One pipeline, eight stages, no black boxes.</h2>
+          <p class="lede">By the end of day three, you'll have run every stage below — from raw FASTQ to an annotated
+            VCF. This follows the GATK germline short-variant workflow, the same approach used in production clinical
+            pipelines.</p>
+        </div>
+
+        <div class="snake">
+          <div class="snode is-input to-right"><span class="snum">01</span>
+            <div class="sbody">
+              <h4>Raw reads</h4><span class="stool">FASTQ.gz</span>
+            </div>
+          </div>
+          <div class="snode to-down"><span class="snum">02</span>
+            <div class="sbody">
+              <h4>QC &amp; trim</h4><span class="stool">FastQC · fastp</span>
+            </div>
+          </div>
+          <div class="snode to-left"><span class="snum">03</span>
+            <div class="sbody">
+              <h4>Align reads</h4><span class="stool">BWA-MEM → GRCh38</span>
+            </div>
+          </div>
+          <div class="snode to-down"><span class="snum">04</span>
+            <div class="sbody">
+              <h4>Sort &amp; dedup</h4><span class="stool">samtools · Picard</span>
+            </div>
+          </div>
+          <div class="snode to-right"><span class="snum">05</span>
+            <div class="sbody">
+              <h4>Recalibrate</h4><span class="stool">GATK BQSR</span>
+            </div>
+          </div>
+          <div class="snode to-down"><span class="snum">06</span>
+            <div class="sbody">
+              <h4>Call variants</h4><span class="stool">HaplotypeCaller</span>
+            </div>
+          </div>
+          <div class="snode to-left"><span class="snum">07</span>
+            <div class="sbody">
+              <h4>Filter</h4><span class="stool">hard filters · VQSR</span>
+            </div>
+          </div>
+          <div class="snode to-down"><span class="snum">08</span>
+            <div class="sbody">
+              <h4>Annotate</h4><span class="stool">Ensembl VEP</span>
+            </div>
+          </div>
+          <div class="snake-end"><strong>Analysis-ready VCF</strong><span>filtered &amp; annotated</span></div>
+        </div>
+
+        <div class="grid cols-4" style="margin-top:clamp(34px,5vw,52px)">
+          <div class="stat">
+            <div class="big"><em>~3.2M</em></div>
+            <div class="lab">reads in the practice dataset (chr20 subset of NA12878), small enough that labs finish in
+              minutes on a regular laptop.</div>
+          </div>
+          <div class="stat">
+            <div class="big"><em>1</em></div>
+            <div class="lab">truth set to grade against. We benchmark your calls with <code class="mono">hap.py</code>
+              against the GIAB high-confidence regions.</div>
+          </div>
+          <div class="stat">
+            <div class="big"><em>8</em></div>
+            <div class="lab">hands-on labs across the three days, each ending in output you can open in IGV and inspect
+              by eye.</div>
+          </div>
+          <div class="stat">
+            <div class="big"><em>0</em></div>
+            <div class="lab">black boxes. If a tool does something, you'll know which flag did it and why it's there.
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Day 3 -->
-      <div class="week">
-        <button class="week-head" aria-expanded="false" aria-controls="w3">
-          <span class="week-tag">Day 3</span>
-          <span class="week-title">Variant calling, filtering &amp; annotation
-            <span class="week-sub">BAM → annotated VCF — and learning not to believe every call</span>
-          </span>
-          <span class="week-toggle" aria-hidden="true">+</span>
-        </button>
-        <div class="week-panel" id="w3">
-          <div class="week-panel-inner">
-            <ul>
-              <li>Base Quality Score Recalibration: the systematic error it corrects and how to tell if it actually helped.</li>
-              <li>GATK HaplotypeCaller and local re-assembly — the intuition for why it re-aligns around candidate sites.</li>
-              <li>The VCF format in depth: <code class="mono">INFO</code>, <code class="mono">FORMAT</code>, <code class="mono">AD</code>/<code class="mono">DP</code>/<code class="mono">GQ</code>, and what a <code class="mono">0/1</code> genotype really means.</li>
-              <li>Filtering calls, reading one in IGV to decide for yourself, and benchmarking against the GIAB truth set with <code class="mono">hap.py</code> — precision and recall for your own pipeline.</li>
-              <li>Annotating with Ensembl VEP, then a Python lab to load your variants into pandas, summarise them and plot depth and quality.</li>
-              <li>Where to go next: automating with Nextflow, joint genotyping across samples, somatic calling, and running on an HPC scheduler.</li>
-            </ul>
-            <div class="week-meta">
-              <span><b>Capstone lab —</b> take a BAM all the way to a filtered, annotated VCF and summarise it in Python.</span>
-              <span><b>Outcome:</b> a complete variant-calling pipeline you ran end-to-end yourself.</span>
+    <!-- ============ CURRICULUM ============ -->
+    <section class="section" id="curriculum">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Day by day</p>
+          <h2>Three days, built so each one unblocks the next.</h2>
+          <p class="lede">Each day has a live teaching session followed by hands-on labs you run yourself. Sessions are
+            recorded. Everything runs in a pre-built conda environment so you spend your time on the actual analysis,
+            not on setup.</p>
+        </div>
+
+        <div class="syllabus">
+          <!-- Day 1 -->
+          <div class="week">
+            <button class="week-head" aria-expanded="true" aria-controls="w1">
+              <span class="week-tag">Day 1</span>
+              <span class="week-title">Linux &amp; Python — the ground you'll stand on
+                <span class="week-sub">The command line, plus just-enough Python to handle genomic data</span>
+              </span>
+              <span class="week-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="week-panel" id="w1">
+              <div class="week-panel-inner">
+                <ul>
+                  <li>Navigating a real filesystem: paths, <code class="mono">ls -lh</code>, globbing, tab-completion,
+                    and where your data actually lives on a server.</li>
+                  <li>Pipes and redirection — the single idea that makes the whole toolchain compose. Counting reads in
+                    a FASTQ with <code class="mono">zcat | wc -l</code> before any "real" tool.</li>
+                  <li><code class="mono">grep</code>, <code class="mono">awk</code>, <code class="mono">sort</code>,
+                    <code class="mono">cut</code> on tab-delimited genomics files — the daily-driver skills no tutorial
+                    teaches you.
+                  </li>
+                  <li>Writing a bash loop over many samples, with variables, permissions, <code
+                      class="mono">chmod +x</code> and the shebang line.</li>
+                  <li>Reproducible environments with conda/mamba — then your first Python: reading files, loading a
+                    table with pandas, and a quick plot.</li>
+                </ul>
+                <div class="week-meta">
+                  <span><b>Labs —</b> set up your environment, write a sample-sheet parser in bash, and read your first
+                    file in Python.</span>
+                  <span><b>Outcome:</b> at home both in a terminal and in a Python script.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 2 -->
+          <div class="week">
+            <button class="week-head" aria-expanded="false" aria-controls="w2">
+              <span class="week-tag">Day 2</span>
+              <span class="week-title">Reads, references, and alignment
+                <span class="week-sub">FASTQ → BAM: what's in the files and how to map them honestly</span>
+              </span>
+              <span class="week-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="week-panel" id="w2">
+              <div class="week-panel-inner">
+                <ul>
+                  <li>Anatomy of a FASTQ record and Phred quality scores — reading them, not just trusting them.</li>
+                  <li>Quality control with FastQC + MultiQC: spotting adapter contamination and over-represented
+                    sequences, then trimming with fastp.</li>
+                  <li>Reference genomes: GRCh38 vs hg19, why the build matters, and indexing with <code
+                      class="mono">bwa index</code> / <code class="mono">samtools faidx</code>.</li>
+                  <li>Aligning with BWA-MEM, read groups (and why every downstream tool nags you about them), and the
+                    SAM/BAM format field by field.</li>
+                  <li>Sorting, indexing, marking duplicates, and reading a <code class="mono">samtools flagstat</code>
+                    report critically.</li>
+                </ul>
+                <div class="week-meta">
+                  <span><b>Lab —</b> align NA12878, mark duplicates, and view your BAM in IGV.</span>
+                  <span><b>Outcome:</b> an analysis-ready, deduplicated BAM you built yourself.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="week">
+            <button class="week-head" aria-expanded="false" aria-controls="w3">
+              <span class="week-tag">Day 3</span>
+              <span class="week-title">Variant calling, filtering &amp; annotation
+                <span class="week-sub">BAM → annotated VCF — and learning not to believe every call</span>
+              </span>
+              <span class="week-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="week-panel" id="w3">
+              <div class="week-panel-inner">
+                <ul>
+                  <li>Base Quality Score Recalibration: the systematic error it corrects and how to tell if it actually
+                    helped.</li>
+                  <li>GATK HaplotypeCaller and local re-assembly — the intuition for why it re-aligns around candidate
+                    sites.</li>
+                  <li>The VCF format in depth: <code class="mono">INFO</code>, <code class="mono">FORMAT</code>, <code
+                      class="mono">AD</code>/<code class="mono">DP</code>/<code class="mono">GQ</code>, and what a <code
+                      class="mono">0/1</code> genotype really means.</li>
+                  <li>Filtering calls, reading one in IGV to decide for yourself, and benchmarking against the GIAB
+                    truth set with <code class="mono">hap.py</code> — precision and recall for your own pipeline.</li>
+                  <li>Annotating with Ensembl VEP, then a Python lab to load your variants into pandas, summarise them
+                    and plot depth and quality.</li>
+                  <li>Where to go next: automating with Nextflow, joint genotyping across samples, somatic calling, and
+                    running on an HPC scheduler.</li>
+                </ul>
+                <div class="week-meta">
+                  <span><b>Capstone lab —</b> take a BAM all the way to a filtered, annotated VCF and summarise it in
+                    Python.</span>
+                  <span><b>Outcome:</b> a complete variant-calling pipeline you ran end-to-end yourself.</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ OUTCOMES ============ -->
-<section class="section section--tint" id="outcomes">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Outcomes</p>
-      <h2>What you'll walk away with.</h2>
-    </div>
-    <div class="grid cols-3">
-      <div class="card"><span class="num">01</span><h3>Run FASTQ → VCF independently</h3></div>
-      <div class="card"><span class="num">02</span><h3>Read and evaluate any pipeline</h3></div>
-      <div class="card"><span class="num">03</span><h3>Work confidently on the command line</h3></div>
-      <div class="card"><span class="num">04</span><h3>Tell a good variant call from a bad one</h3></div>
-      <div class="card"><span class="num">05</span><h3>Make your analysis reproducible</h3></div>
-      <div class="card"><span class="num">06</span><h3>Know what to learn next</h3></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FORMAT / LOGISTICS ============ -->
-<section class="section" id="format">
-  <div class="wrap">
-    <div class="why-grid">
-      <div>
-        <p class="eyebrow">How it runs</p>
-        <h2>Small, live, and built around the lab — not the lecture.</h2>
-        <p>Each batch is limited to 30 students so the instructors can give proper attention to everyone. If more than 30 people register, additional students are moved to the next batch. Live sessions are for working through problems together; the main learning happens in the hands-on labs, with help available on WhatsApp.</p>
-        <ul class="check-list" style="margin-top:1.4rem">
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg><span><b>Three live sessions, one per day</b>, 10:00 AM – 1:30 PM IST across Fri–Sun. Always recorded.</span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg><span><b>Hands-on labs each afternoon</b> you work through at your own pace, with the lab guide to keep.</span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg><span><b>A private WhatsApp group</b> with the instructors and TA answering through the workshop and the week after.</span></li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg><span><b>A follow-up doubt-clearing session</b> the week after, for anyone stuck on a lab or wanting to talk through their own data.</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="card" style="padding:0; overflow:hidden;">
-          <div style="background:var(--ink); color:#fff; padding:20px 24px;">
-            <div class="mono" style="font-size:.74rem; letter-spacing:.1em; color:var(--term-green); text-transform:uppercase;">Logistics at a glance</div>
+    <!-- ============ OUTCOMES ============ -->
+    <section class="section section--tint" id="outcomes">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Outcomes</p>
+          <h2>What you'll walk away with.</h2>
+        </div>
+        <div class="grid cols-3">
+          <div class="card"><span class="num">01</span>
+            <h3>Run FASTQ → VCF independently</h3>
           </div>
-          <div style="padding:8px 24px 22px;">
-            <dl style="margin:0;">
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Next batch</dt><dd style="margin:0; font-weight:600;">Sat–Mon, 27–29 Jun 2026</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Length</dt><dd style="margin:0; font-weight:600;">3 days (~10 hrs total)</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Fee</dt><dd style="margin:0; font-weight:600;">₹500 (all three days)</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Format</dt><dd style="margin:0; font-weight:600;">Live online + recordings</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Batch size</dt><dd style="margin:0; font-weight:600;">30 max</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">Prerequisites</dt><dd style="margin:0; font-weight:600;">None — we start from scratch</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);"><dt class="muted">You'll need</dt><dd style="margin:0; font-weight:600; text-align:right;">A laptop · ~20 GB free disk</dd></div>
-              <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0;"><dt class="muted">Certificate</dt><dd style="margin:0; font-weight:600;">On completing the labs</dd></div>
-            </dl>
-            <a href="#pricing" class="btn btn--primary btn--block" style="margin-top:1.2rem;">See dates &amp; enrol</a>
+          <div class="card"><span class="num">02</span>
+            <h3>Read and evaluate any pipeline</h3>
+          </div>
+          <div class="card"><span class="num">03</span>
+            <h3>Work confidently on the command line</h3>
+          </div>
+          <div class="card"><span class="num">04</span>
+            <h3>Tell a good variant call from a bad one</h3>
+          </div>
+          <div class="card"><span class="num">05</span>
+            <h3>Make your analysis reproducible</h3>
+          </div>
+          <div class="card"><span class="num">06</span>
+            <h3>Know what to learn next</h3>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============ INSTRUCTORS ============ -->
-<section class="section section--tint" id="instructors">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Who teaches it</p>
-      <h2>People who run these pipelines for a living.</h2>
-      <p class="lede">Working bioinformaticians who spend their days on real genomics projects and remember what it was like to learn this from scratch.</p>
-    </div>
-    <div class="grid cols-2">
-      <div class="card person">
-        <div class="avatar">HA</div>
+    <!-- ============ FORMAT / LOGISTICS ============ -->
+    <section class="section" id="format">
+      <div class="wrap">
+        <div class="why-grid">
+          <div>
+            <p class="eyebrow">How it runs</p>
+            <h2>Small, live, and built around the lab — not the lecture.</h2>
+            <p>Each batch is limited to 30 students so the instructors can give proper attention to everyone. If more
+              than 30 people register, additional students are moved to the next batch. Live sessions are for working
+              through problems together; the main learning happens in the hands-on labs, with help available on
+              WhatsApp.</p>
+            <ul class="check-list" style="margin-top:1.4rem">
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg><span><b>Three live sessions, one per day</b>, 10:00 AM – 1:30 PM IST across Fri–Sun. Always
+                  recorded.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg><span><b>Hands-on labs each afternoon</b> you work through at your own pace, with the lab guide to
+                  keep.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg><span><b>A private WhatsApp group</b> with the instructors and TA answering through the workshop
+                  and the week after.</span></li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg><span><b>A follow-up doubt-clearing session</b> the week after, for anyone stuck on a lab or
+                  wanting to talk through their own data.</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="card" style="padding:0; overflow:hidden;">
+              <div style="background:var(--ink); color:#fff; padding:20px 24px;">
+                <div class="mono"
+                  style="font-size:.74rem; letter-spacing:.1em; color:var(--term-green); text-transform:uppercase;">
+                  Logistics at a glance</div>
+              </div>
+              <div style="padding:8px 24px 22px;">
+                <dl style="margin:0;">
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">Next batch</dt>
+                    <dd style="margin:0; font-weight:600;">Sat–Mon, 27–29 Jun 2026</dd>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">Length</dt>
+                    <dd style="margin:0; font-weight:600;">3 days (~10 hrs total)</dd>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">Fee</dt>
+                    <dd style="margin:0; font-weight:600;">₹500 (all three days)</dd>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">Format</dt>
+                    <dd style="margin:0; font-weight:600;">Live online + recordings</dd>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">Batch size</dt>
+                    <dd style="margin:0; font-weight:600;">30 max</dd>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">Prerequisites</dt>
+                    <dd style="margin:0; font-weight:600;">None — we start from scratch</dd>
+                  </div>
+                  <div
+                    style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0; border-bottom:1px solid var(--line);">
+                    <dt class="muted">You'll need</dt>
+                    <dd style="margin:0; font-weight:600; text-align:right;">A laptop · ~20 GB free disk</dd>
+                  </div>
+                  <div style="display:flex; justify-content:space-between; gap:1rem; padding:.85rem 0;">
+                    <dt class="muted">Certificate</dt>
+                    <dd style="margin:0; font-weight:600;">On completing the labs</dd>
+                  </div>
+                </dl>
+                <a href="#pricing" class="btn btn--primary btn--block" style="margin-top:1.2rem;">See dates &amp;
+                  enrol</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INSTRUCTORS ============ -->
+    <section class="section section--tint" id="instructors">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Who teaches it</p>
+          <h2>People who run these pipelines for a living.</h2>
+          <p class="lede">Working bioinformaticians who spend their days on real genomics projects and remember what it
+            was like to learn this from scratch.</p>
+        </div>
+        <div class="grid cols-2">
+          <div class="card person">
+            <div class="avatar">HA</div>
+            <div>
+              <h3>Hiba Ali</h3>
+              <div class="role">Instructor · Research Scientist, University Hospital Ulm</div>
+              <p>Former Research Associate at the Centre for Brain Research (CBR), IISc, now a research scientist at
+                University Hospital Ulm. Her current work focuses on whole-genome sequencing in neurological disease,
+                including a study of 197 Parkinson's cases that identified novel pathogenic variants in the Indian
+                population.</p>
+              <div class="links"><a href="https://www.linkedin.com/in/hiba-ali-09b396253/" target="_blank"
+                  rel="noopener">LinkedIn</a><a href="https://www.medrxiv.org/content/10.1101/2025.10.19.25338055v1"
+                  target="_blank" rel="noopener">Parkinson's WGS paper ↗</a></div>
+            </div>
+          </div>
+          <div class="card person">
+            <div class="avatar v2">BP</div>
+            <div>
+              <h3>Bikram Kumar Panda</h3>
+              <div class="role">Instructor · PhD candidate, IISc — bioinformatics &amp; HPC</div>
+              <p>PhD candidate at IISc, working on bioinformatics tools and high-performance computing for genomics. Has
+                previously trained college faculty through NIELIT programmes.</p>
+              <div class="links"><a href="https://www.linkedin.com/in/bikram-kumar-panda-06412ab6/" target="_blank"
+                  rel="noopener">LinkedIn</a><a href="https://www.github.com/bpanda-dev" target="_blank"
+                  rel="noopener">GitHub</a></div>
+            </div>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:1.6rem; font-size:.9rem;">Both instructors teach every batch, with a teaching
+          assistant available in the WhatsApp group and the follow-up session.</p>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="section-head" style="text-align:center; margin-inline:auto;">
+          <p class="eyebrow" style="justify-content:center;">Enrol</p>
+          <h2>Three days. One simple fee.</h2>
+          <p class="lede" style="margin-inline:auto;">₹500 covers all three days, the dataset, the materials and the
+            certificate. No tiers, no upsells. We've kept the fee low so it's accessible to everyone.</p>
+        </div>
+        <div class="price-grid is-single">
+          <div class="plan is-featured">
+            <span class="ribbon">Batch 01 · 27–29 Jun</span>
+            <h3>The 3-day workshop</h3>
+            <p class="who">Everything, for everyone — students, researchers and working professionals alike.</p>
+            <div class="amt">₹500 <small>only</small></div>
+            <div class="per">one-time · all three days included</div>
+            <ul>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg> All three live days, plus recordings</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg> The practice dataset &amp; pre-built conda environment</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg> Private WhatsApp group + a follow-up doubt session</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg> Lifetime access to slides, commands &amp; lab guides</li>
+              <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 10l4 4 8-9" />
+                </svg> Certificate on completing the labs</li>
+            </ul>
+            <a href="mailto:deepdivegenomics@gmail.com?subject=Batch%2001%20enrolment%20(%E2%82%B9500)"
+              class="btn btn--ghost btn--block">Enrol in Batch 01 — ₹500</a>
+          </div>
+        </div>
+        <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.9rem;">Pay by UPI or card on the
+          enrolment page. Each batch is limited to 30 students — if we're full, you'll be offered a spot in the next
+          one.</p>
+      </div>
+    </section>
+
+    <!-- ============ SCHOLARSHIP ============ -->
+    <section class="section section--tint" id="scholarship">
+      <div class="wrap">
+        <div class="section-head" style="text-align:center; margin-inline:auto;">
+          <p class="eyebrow" style="justify-content:center;">Scholarship</p>
+          <h2>Need a fee reduction? Apply for a scholarship spot.</h2>
+          <p class="lede" style="margin-inline:auto;">We set aside 6 seats per batch (out of 30) at a reduced fee. These
+            are for students who genuinely need the help — no complicated process, just an honest email.</p>
+        </div>
+        <div class="price-grid is-single">
+          <div class="card" style="text-align:center; padding:clamp(28px,4vw,40px);">
+            <div
+              style="font-family:var(--mono); font-size:.76rem; letter-spacing:.1em; color:var(--teal-deep); text-transform:uppercase; margin-bottom:1.2em;">
+              6 scholarship seats per batch</div>
+            <h3 style="font-size:1.15rem; margin-bottom:.8em;">How to apply</h3>
+            <ol
+              style="text-align:left; max-width:48ch; margin:0 auto 1.6em; padding-left:1.3rem; color:var(--ink-soft); font-size:.95rem; display:grid; gap:.6rem;">
+              <li>Send an email to <a
+                  href="mailto:deepdivegenomics@gmail.com?subject=Scholarship%20application%20—%20Batch%2001">deepdivegenomics@gmail.com</a>
+              </li>
+              <li>Attach your CV</li>
+              <li>Write a short note explaining why you'd like a fee reduction</li>
+            </ol>
+            <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.4em;">That's it. We review applications on a
+              rolling basis and get back within a few days.</p>
+            <a href="mailto:deepdivegenomics@gmail.com?subject=Scholarship%20application%20—%20Batch%2001"
+              class="btn btn--primary">Apply for a scholarship seat <span class="btn-arrow"
+                aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+        </div>
+        <div class="faq">
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>Do I need to know how to program?</span><span class="pm"
+                aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>No. Day 1 starts from the very beginning — basic command line usage and just enough Python to work with
+                variant tables. If you've never written code before, this workshop is designed for you. If you already
+                code but are new to genomics, you'll move through day one quickly and get into the biology from day two.
+              </p>
+            </div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>What kind of computer do I need? Does it have to be a
+                Mac?</span><span class="pm" aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>Any laptop with about 20 GB of free disk space. macOS and Linux work natively; on Windows we'll get you
+                set up with WSL2 in the first session (it's painless these days). The practice dataset is deliberately
+                small — a chr20 subset — so you do not need a powerful machine or cluster access to complete every lab.
+              </p>
+            </div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>Is this clinical or research focused?</span><span
+                class="pm" aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>The germline short-variant pipeline you build follows the same workflow used in both research and
+                diagnostic settings, so the skills apply to either. That said, this is an educational workshop — it is
+                not accredited clinical training and should not be used for patient decisions.</p>
+            </div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>Can I bring my own data?</span><span class="pm"
+                aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>During the labs, everyone uses the same well-characterised sample so we can compare calls against a
+                known truth set. The follow-up session is a good place to bring your own data — share a BAM or a FASTQ
+                and we'll work through it together.</p>
+            </div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>What if I miss a live session?</span><span class="pm"
+                aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>Every session is recorded and shared the same day. The labs can be done at your own pace. If you miss a
+                live session, you can catch up from the recording and ask questions in the WhatsApp group.</p>
+            </div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>How is this different from a free YouTube
+                tutorial?</span><span class="pm" aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>The information itself is freely available online. What's different here is structure, feedback, and a
+                small batch where someone actually looks at your work. You get three focused days with instructors who
+                can help when you're stuck — which is usually what stops self-learners from finishing.</p>
+            </div>
+          </div>
+          <div class="qa">
+            <button class="qa-q" aria-expanded="false"><span>I'm not sure it's the right level for me.</span><span
+                class="pm" aria-hidden="true">+</span></button>
+            <div class="qa-a">
+              <p>Email us at <a href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a> and tell us
+                about your background. We'll let you know whether this batch is a good fit, or suggest something else to
+                start with.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
         <div>
-          <h3>Hiba Ali</h3>
-          <div class="role">Instructor · Research Scientist, University Hospital Ulm</div>
-          <p>Former Research Associate at the Centre for Brain Research (CBR), IISc, now a research scientist at University Hospital Ulm. Her current work focuses on whole-genome sequencing in neurological disease, including a study of 197 Parkinson's cases that identified novel pathogenic variants in the Indian population.</p>
-          <div class="links"><a href="https://www.linkedin.com/in/hiba-ali-09b396253/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.medrxiv.org/content/10.1101/2025.10.19.25338055v1" target="_blank" rel="noopener">Parkinson's WGS paper ↗</a></div>
+          <a class="brand" href="#top" aria-label="DeepDiveGenomics home">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <rect width="32" height="32" rx="7" fill="#0f1115" />
+              <g fill="none" stroke="#2bb39a" stroke-width="2" stroke-linecap="round">
+                <path d="M11 5c0 5.5 10 5.5 10 11s-10 5.5-10 11" />
+                <path d="M21 5c0 5.5-10 5.5-10 11s10 5.5 10 11" />
+              </g>
+              <g stroke="#d8c26a" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12.2 9.5h7.6" />
+                <path d="M13.4 13h5.2" />
+                <path d="M13.4 19h5.2" />
+                <path d="M12.2 22.5h7.6" />
+              </g>
+            </svg>
+            <span>Deep<b class="brand-deep">Dive</b>Genomics</span>
+          </a>
+          <p style="margin-top:1rem">Hands-on workshops in bioinformatics pipelines. We teach the command line, the
+            tools, and the judgement — on real data, in small batches.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Workshop</h4>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#pipeline">The pipeline</a>
+          <a href="#format">Format &amp; dates</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h4>Organisation</h4>
+          <a href="#instructors">Instructors</a>
+          <a href="mailto:deepdivegenomics@gmail.com">Contact</a>
+          <a href="#scholarship">Scholarship</a>
+        </div>
+        <div class="foot-col">
+          <h4>Get batch dates</h4>
+          <p style="margin-bottom:0">Occasional email when a new batch opens. No spam, unsubscribe anytime.</p>
+          <form class="foot-form" onsubmit="return false;" aria-label="Newsletter signup">
+            <input type="email" name="email" placeholder="you@college.edu" aria-label="Email address" required>
+            <button type="submit">Notify me</button>
+          </form>
         </div>
       </div>
-      <div class="card person">
-        <div class="avatar v2">BP</div>
-        <div>
-          <h3>Bikram Kumar Panda</h3>
-          <div class="role">Instructor · PhD candidate, IISc — bioinformatics &amp; HPC</div>
-          <p>PhD candidate at IISc, working on bioinformatics tools and high-performance computing for genomics. Has previously trained college faculty through NIELIT programmes.</p>
-          <div class="links"><a href="https://www.linkedin.com/in/bikram-kumar-panda-06412ab6/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.github.com/bpanda-dev" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
+      <div class="foot-bottom">
+        <span>© 2026 DeepDiveGenomics. An independent workshop, not affiliated with the Broad Institute, Ensembl, or
+          GATK.</span>
+        <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a
+            href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a></span>
       </div>
     </div>
-    <p class="muted" style="margin-top:1.6rem; font-size:.9rem;">Both instructors teach every batch, with a teaching assistant available in the WhatsApp group and the follow-up session.</p>
-  </div>
-</section>
+  </footer>
 
-<!-- ============ PRICING ============ -->
-<section class="section" id="pricing">
-  <div class="wrap">
-    <div class="section-head" style="text-align:center; margin-inline:auto;">
-      <p class="eyebrow" style="justify-content:center;">Enrol</p>
-      <h2>Three days. One simple fee.</h2>
-      <p class="lede" style="margin-inline:auto;">₹500 covers all three days, the dataset, the materials and the certificate. No tiers, no upsells. We've kept the fee low so it's accessible to everyone.</p>
-    </div>
-    <div class="price-grid is-single">
-      <div class="plan is-featured">
-        <span class="ribbon">Batch 01 · 27–29 Jun</span>
-        <h3>The 3-day workshop</h3>
-        <p class="who">Everything, for everyone — students, researchers and working professionals alike.</p>
-        <div class="amt">₹500 <small>only</small></div>
-        <div class="per">one-time · all three days included</div>
-        <ul>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> All three live days, plus recordings</li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> The practice dataset &amp; pre-built conda environment</li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> Private WhatsApp group + a follow-up doubt session</li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> Lifetime access to slides, commands &amp; lab guides</li>
-          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9"/></svg> Certificate on completing the labs</li>
-        </ul>
-        <a href="mailto:deepdivegenomics@gmail.com?subject=Batch%2001%20enrolment%20(%E2%82%B9500)" class="btn btn--ghost btn--block">Enrol in Batch 01 — ₹500</a>
-      </div>
-    </div>
-    <p class="muted" style="text-align:center; margin-top:1.6rem; font-size:.9rem;">Pay by UPI or card on the enrolment page. Each batch is limited to 30 students — if we're full, you'll be offered a spot in the next one.</p>
-  </div>
-</section>
-
-<!-- ============ SCHOLARSHIP ============ -->
-<section class="section section--tint" id="scholarship">
-  <div class="wrap">
-    <div class="section-head" style="text-align:center; margin-inline:auto;">
-      <p class="eyebrow" style="justify-content:center;">Scholarship</p>
-      <h2>Need a fee reduction? Apply for a scholarship spot.</h2>
-      <p class="lede" style="margin-inline:auto;">We set aside 6 seats per batch (out of 30) at a reduced fee. These are for students who genuinely need the help — no complicated process, just an honest email.</p>
-    </div>
-    <div class="price-grid is-single">
-      <div class="card" style="text-align:center; padding:clamp(28px,4vw,40px);">
-        <div style="font-family:var(--mono); font-size:.76rem; letter-spacing:.1em; color:var(--teal-deep); text-transform:uppercase; margin-bottom:1.2em;">6 scholarship seats per batch</div>
-        <h3 style="font-size:1.15rem; margin-bottom:.8em;">How to apply</h3>
-        <ol style="text-align:left; max-width:48ch; margin:0 auto 1.6em; padding-left:1.3rem; color:var(--ink-soft); font-size:.95rem; display:grid; gap:.6rem;">
-          <li>Send an email to <a href="mailto:deepdivegenomics@gmail.com?subject=Scholarship%20application%20—%20Batch%2001">deepdivegenomics@gmail.com</a></li>
-          <li>Attach your CV</li>
-          <li>Write a short note explaining why you'd like a fee reduction</li>
-        </ol>
-        <p style="color:var(--muted); font-size:.9rem; margin-bottom:1.4em;">That's it. We review applications on a rolling basis and get back within a few days.</p>
-        <a href="mailto:deepdivegenomics@gmail.com?subject=Scholarship%20application%20—%20Batch%2001" class="btn btn--primary">Apply for a scholarship seat <span class="btn-arrow" aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="section" id="faq">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">FAQ</p>
-      <h2>Common questions</h2>
-    </div>
-    <div class="faq">
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>Do I need to know how to program?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>No. Day 1 starts from the very beginning — basic command line usage and just enough Python to work with variant tables. If you've never written code before, this workshop is designed for you. If you already code but are new to genomics, you'll move through day one quickly and get into the biology from day two.</p></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>What kind of computer do I need? Does it have to be a Mac?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>Any laptop with about 20 GB of free disk space. macOS and Linux work natively; on Windows we'll get you set up with WSL2 in the first session (it's painless these days). The practice dataset is deliberately small — a chr20 subset — so you do not need a powerful machine or cluster access to complete every lab.</p></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>Is this clinical or research focused?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>The germline short-variant pipeline you build follows the same workflow used in both research and diagnostic settings, so the skills apply to either. That said, this is an educational workshop — it is not accredited clinical training and should not be used for patient decisions.</p></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>Can I bring my own data?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>During the labs, everyone uses the same well-characterised sample so we can compare calls against a known truth set. The follow-up session is a good place to bring your own data — share a BAM or a FASTQ and we'll work through it together.</p></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>What if I miss a live session?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>Every session is recorded and shared the same day. The labs can be done at your own pace. If you miss a live session, you can catch up from the recording and ask questions in the WhatsApp group.</p></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>How is this different from a free YouTube tutorial?</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>The information itself is freely available online. What's different here is structure, feedback, and a small batch where someone actually looks at your work. You get three focused days with instructors who can help when you're stuck — which is usually what stops self-learners from finishing.</p></div>
-      </div>
-      <div class="qa">
-        <button class="qa-q" aria-expanded="false"><span>I'm not sure it's the right level for me.</span><span class="pm" aria-hidden="true">+</span></button>
-        <div class="qa-a"><p>Email us at <a href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a> and tell us about your background. We'll let you know whether this batch is a good fit, or suggest something else to start with.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="brand" href="#top" aria-label="DeepDiveGenomics home">
-          <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0f1115"/><g fill="none" stroke="#2bb39a" stroke-width="2" stroke-linecap="round"><path d="M11 5c0 5.5 10 5.5 10 11s-10 5.5-10 11"/><path d="M21 5c0 5.5-10 5.5-10 11s10 5.5 10 11"/></g><g stroke="#d8c26a" stroke-width="1.6" stroke-linecap="round"><path d="M12.2 9.5h7.6"/><path d="M13.4 13h5.2"/><path d="M13.4 19h5.2"/><path d="M12.2 22.5h7.6"/></g></svg>
-          <span>Deep<b class="brand-deep">Dive</b>Genomics</span>
-        </a>
-        <p style="margin-top:1rem">Hands-on workshops in bioinformatics pipelines. We teach the command line, the tools, and the judgement — on real data, in small batches.</p>
-      </div>
-      <div class="foot-col">
-        <h4>Workshop</h4>
-        <a href="#curriculum">Curriculum</a>
-        <a href="#pipeline">The pipeline</a>
-        <a href="#format">Format &amp; dates</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-      </div>
-      <div class="foot-col">
-        <h4>Organisation</h4>
-        <a href="#instructors">Instructors</a>
-        <a href="mailto:deepdivegenomics@gmail.com">Contact</a>
-        <a href="#scholarship">Scholarship</a>
-      </div>
-      <div class="foot-col">
-        <h4>Get batch dates</h4>
-        <p style="margin-bottom:0">Occasional email when a new batch opens. No spam, unsubscribe anytime.</p>
-        <form class="foot-form" onsubmit="return false;" aria-label="Newsletter signup">
-          <input type="email" name="email" placeholder="you@college.edu" aria-label="Email address" required>
-          <button type="submit">Notify me</button>
-        </form>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 DeepDiveGenomics. An independent workshop, not affiliated with the Broad Institute, Ensembl, or GATK.</span>
-      <span><a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="mailto:deepdivegenomics@gmail.com">deepdivegenomics@gmail.com</a></span>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
